@@ -40,7 +40,7 @@
             margin-left: -10px;
         }
 
-        /* Freccia sopra la ruota */
+        /* Freccia centrata sopra la ruota */
         .arrow {
             position: absolute;
             top: -20px; /* Posiziona la freccia sopra la ruota */
@@ -51,6 +51,7 @@
             border-left: 10px solid transparent;
             border-right: 10px solid transparent;
             border-bottom: 20px solid black; /* Freccia nera */
+            z-index: 1;
         }
 
         #spinButton {
@@ -81,8 +82,8 @@
     <h1>Ruota della Fortuna</h1>
 
     <div class="wheel-container">
-        <!-- Freccia sopra la ruota -->
-        <div class="arrow"></div>
+        <!-- Freccia centrata sopra la ruota -->
+        <div class="arrow" id="arrow"></div>
         <div class="wheel" id="wheel"></div>
     </div>
 
@@ -114,6 +115,7 @@
             const targetAngle = degreesPerSection * presetResultIndex + 3600; // Gira almeno 10 volte e poi si ferma sulla sezione giusta
 
             const wheel = document.getElementById('wheel');
+            const arrow = document.getElementById('arrow');
 
             // Applica la rotazione alla ruota
             wheel.style.transform = `rotate(${targetAngle}deg)`;
@@ -130,5 +132,7 @@
     </script>
 
 </body>
+</html>
+
 </html>
 
