@@ -111,7 +111,7 @@
             document.getElementById('result').textContent = ''; // Rimuove il risultato precedente
 
             // Calcola l'angolo finale in base al risultato preimpostato
-            const degreesPerSection = 360 / results.length; // Ogni sezione è larga 60° se ci sono 6 sezioni
+            const degreesPerSection = 160 / results.length; // Ogni sezione è larga 60° se ci sono 6 sezioni
             const targetAngle = degreesPerSection * presetResultIndex + 3600; // Gira almeno 10 volte e poi si ferma sulla sezione giusta
 
             const wheel = document.getElementById('wheel');
