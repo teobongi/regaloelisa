@@ -40,6 +40,19 @@
             margin-left: -10px;
         }
 
+        /* Freccia sopra la ruota */
+        .arrow {
+            position: absolute;
+            top: -20px; /* Posiziona la freccia sopra la ruota */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 20px solid black; /* Freccia nera */
+        }
+
         #spinButton {
             margin-top: 20px;
             padding: 15px 30px;
@@ -68,6 +81,8 @@
     <h1>Ruota della Fortuna</h1>
 
     <div class="wheel-container">
+        <!-- Freccia sopra la ruota -->
+        <div class="arrow"></div>
         <div class="wheel" id="wheel"></div>
     </div>
 
@@ -116,3 +131,4 @@
 
 </body>
 </html>
+
